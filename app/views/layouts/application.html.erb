@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <nav>
+      <div class="home">
+        <%= link_to("Home", products_path) %>
+      </div>
+
+      <div class="add-new-product">
+        <%= link_to("Add new product", new_product_path) %>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
