@@ -29,8 +29,5 @@
 <% end %>
 
 <% @reviews.each do |review| %>
-  <div class="review-div">
-    <p><%= review.comment %></p>
-    <p><%= review.created_at %></p>
-  </div>
+  <%= render '/reviews/form', review: review %>
 <% end %>
