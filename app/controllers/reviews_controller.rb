@@ -1,7 +1,4 @@
 class ReviewsController < ApplicationController
-  def new
-
-  end
 
   def create
 
@@ -18,5 +15,5 @@ class ReviewsController < ApplicationController
   def destroy
 
   end
-  
+
 end
