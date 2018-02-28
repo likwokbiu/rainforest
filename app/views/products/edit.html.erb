@@ -1,5 +1,8 @@
 <h2>Edit <%= @product.name %>:</h2>
 
+<%= link_to("Back", product_path(@product)) %>
+
+<%= render 'error', product: @product %>
 <%= render 'form', product: @product %>
 
 <%= link_to("Delete", product_path(@product), method: :delete, data: {confirm: "Are you sire you want to delete this product? This cannot be undone!"}) %>
