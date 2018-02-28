@@ -21,7 +21,16 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @review = Review.find(params[:id])
 
+    @review.comment = params[:review][:comment]
+
+    if @review.save
+      redirect_to "/products/#{params[:product_id]}"
+    else
+      flash[:alert] = "Review cannot be empty!"
+      redirect_to "/products/#{params[:product_id]}/reviews/#{params[:id]}/edit"
+    end
   end
 
   def destroy
