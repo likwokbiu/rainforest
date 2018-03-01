@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :reviews, except: [:index, :new, :show]
   end
 
+  resource :users, only: %i(new create)
+
 end
