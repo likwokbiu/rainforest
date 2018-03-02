@@ -10,4 +10,11 @@ class ApplicationController < ActionController::Base
     user_id && User.find(user_id)
   end
 
+  def ensure_logged_in
+    unless current_user
+      flash[:alert] = "Please log in"
+      redirect_to new_sessions_path
+    end
+  end
+
 end
